@@ -1,6 +1,7 @@
 import './App.css';
 import PhoneForm from "./components/PhoneForm";
 import {Component} from "react";
+import PhoneInfoList from "./components/PhoneInfoList";
 
 class App extends Component{
   state = {
@@ -18,7 +19,7 @@ class App extends Component{
     return (
       <div>
         <PhoneForm onCreate={this.handleCreate}></PhoneForm>
-        {JSON.stringify(this.state.information)}
+        <PhoneInfoList data={this.state.information}/>
       </div>
     );
   }
